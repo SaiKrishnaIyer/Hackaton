@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+<head>
+    <title>Document</title>
+</head>
+{% block content %}
+<body>
+    <h1 class ="text-center"> Students details from Database</h1>
+    <hr>
+    <br>
+
+    <table class="table table-bordered">
+        {% for student in students %}
+        <tr>
+            <td>{{ student.id }}</td>
+            <td>{{ student.first_name }}</td>
+            <td>{{ student.last_name }}</td>
+            <td>{{ student.student_address }}</td>
+            <td><a class="btn btn-primary" role="button" href="{% url 'student' student.id %}">Click Me</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+{% endblock %}
+</html>

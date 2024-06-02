@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Student Name: {{student.first_name}} {{student.last_name}}</h3>
+    <p>Email Id: {{student.email_id }}</p>
+    <p>Contact: {{ student.phone_number }}</p>
+    <p>Gender: {{ student.student_gender }}</p>
+    <p>Address: {{ student.student_address }}</p>
+    {% for department in student.sudent_department.all%}
+    <em> {{ department }}</em>
+    {% endfor %}
+    <p>{{ student.date_of_birth }}
+</body>
+</html>
